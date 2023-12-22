@@ -10,14 +10,38 @@ FilePond.registerPlugin(
 )
 
 // Filepond: Basic
+// FilePond.create(document.querySelector(".basic-filepond"), {
+//   credits: null,
+//   allowImagePreview: false,
+//   allowMultiple: false,
+//   allowFileEncode: false,
+//   required: false,
+//   storeAsFile: true,
+// })
 FilePond.create(document.querySelector(".basic-filepond"), {
   credits: null,
   allowImagePreview: false,
   allowMultiple: false,
   allowFileEncode: false,
   required: false,
-  storeAsFile: true,
-})
+  server: {
+    process: {
+      url: 'upload.php', // the URL where the server handles the file upload
+      method: 'POST',
+      onload: (response) => {
+        // handle the server response
+        console.log(response);
+        // you can display a success message here if needed
+      },
+      onerror: (response) => {
+        // handle the error response
+        console.error(response);
+        // you can display an error message here if needed
+      }
+    }
+  }
+});
+
 
 // Filepond: Multiple Files
 FilePond.create(document.querySelector(".multiple-files-filepond"), {

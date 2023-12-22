@@ -16,24 +16,30 @@
   },
   {
     "name": "Data Pegawai",
-    "key": "component",
+    "key": "table-datatable",
     "icon": "people",
     "submenu": [
       {
-        "name": "Accordion",
-        "url": "component-accordion.html"
+        "name": "Datatable",
+        "url": "table-datatable.html"
       },
       {
-        "name": "Alert",
-        "url": "component-alert.html"
+        "name": "Datatable",
+        "url": "table-datatable.html"
       }
     ]
+  },
+  {
+    "name": "Rocord CCTV",
+    "key": "application-gallery",
+    "icon": "camera-video",
+    "url": "application-gallery.html"
   },
   {
     "name": "Live Monitoring",
     "key": "application-gallery",
     "icon": "camera-video",
-    "url": "application-gallery.html"
+    "url": "application-gallery2.html"
   },
   {
     "name": "Laporan KPI",
